@@ -1,97 +1,77 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# chart-export-image-pdf-excel
+📊 A React Native app to download line chart data as Image (PNG), PDF table, and Excel (CSV) formats — built using react-native-chart-kit, view-shot, and RNFS. Includes Android 10+ and 13+ storage permission support.
 
-# Getting Started
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+# 📈 React Native Chart Downloader App
 
-## Step 1: Start Metro
+This is a simple React Native app that displays a **Line Chart** and allows users to **download it as:**
+- 📷 Image (PNG)
+- 📄 PDF Report
+- 📊 CSV (Excel-compatible)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+---
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 📱 Android Compatibility
 
-```sh
-# Using npm
-npm start
+| Android Version | Status        |
+|-----------------|---------------|
+| Android 9 (API 28) and below | ✅ Full support |
+| Android 10 (API 29)          | ✅ Full support |
+| Android 11+ (API 30+)        | ⚠️ Partially supported (uses legacy storage) |
+| Android 13+ (API 33+)        | ✅ Requires runtime permission for `READ_MEDIA_IMAGES` |
 
-# OR using Yarn
-yarn start
-```
+> ✅ Tested on devices running Android 10, 11, and 13
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🚀 Features
 
-### Android
+- Beautiful **Bezier Line Chart** using `react-native-chart-kit`
+- Export chart data as:
+  - 📷 PNG Image (using `react-native-view-shot`)
+  - 📄 PDF Table (using `react-native-html-to-pdf`)
+  - 📊 CSV (using `react-native-fs`)
+- Media scanner support to show saved files in **Downloads or Gallery**
+- Compatible with **Scoped Storage** (partially) and **Downloads folder**
 
-```sh
-# Using npm
-npm run android
+---
 
-# OR using Yarn
-yarn android
-```
+## 📦 Used Libraries
 
-### iOS
+| Package | Purpose |
+|--------|----------|
+| [`react-native-chart-kit`](https://github.com/indiespirit/react-native-chart-kit) | To render line charts |
+| [`react-native-view-shot`](https://github.com/gre/react-native-view-shot) | Capture chart as image |
+| [`react-native-fs`](https://github.com/itinance/react-native-fs) | File system access (save image/pdf/csv) |
+| [`react-native-html-to-pdf`](https://github.com/christopherdro/react-native-html-to-pdf) | Generate PDF |
+| [`rn-fetch-blob`](https://github.com/joltup/rn-fetch-blob) | Media scanner (show files in gallery/downloads) |
+| [`@react-native-picker/picker`](https://github.com/react-native-picker/picker) | Dropdown for selecting format |
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 📲 APK Installation
 
-```sh
-bundle install
-```
+You can install the app directly by downloading the APK:
 
-Then, and every time you update your native dependencies, run:
+👉 [**Download APK**]
 
-```sh
-bundle exec pod install
-```
+1. Download the APK from the link above  
+2. Allow "Install from unknown sources" in Android settings  
+3. Install and open the app  
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+> Note: App may ask for file storage/media permissions – please allow to enable saving.
 
-```sh
-# Using npm
-npm run ios
+---
 
-# OR using Yarn
-yarn ios
-```
+## 🖼️ Screenshots (Add Later)
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+## 🛠️ How to Run the App
 
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-project
+npm install
+npx react-native run-android
