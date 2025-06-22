@@ -65,8 +65,8 @@ You can install the app directly by downloading the APK:
 
 ## 🖼️ Screenshots
 
-![GrapthHome](https://github.com/user-attachments/assets/5426a069-44c9-47b5-87ce-90bc9b18391b)
 ![DownloadOption](https://github.com/user-attachments/assets/f8a0a458-7730-4167-a264-26cacec29ff2)
+![GrapthHome](https://github.com/user-attachments/assets/5426a069-44c9-47b5-87ce-90bc9b18391b)
 
 
 
@@ -75,7 +75,7 @@ You can install the app directly by downloading the APK:
 ## 🛠️ How to Run the App
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Sada28/chart-export-image-pdf-excel.git
 cd your-project
 npm install
 npx react-native run-android
